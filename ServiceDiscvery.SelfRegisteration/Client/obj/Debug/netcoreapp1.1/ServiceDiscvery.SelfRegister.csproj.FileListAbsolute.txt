@@ -1,0 +1,9 @@
+C:\Users\3tar\Documents\GitHub\microservice-aspnetcore-servicediscvoery\ServiceDiscvery.SelfRegisteration\Client\bin\Debug\netcoreapp1.1\ServiceDiscvery.SelfRegister.deps.json
+C:\Users\3tar\Documents\GitHub\microservice-aspnetcore-servicediscvoery\ServiceDiscvery.SelfRegisteration\Client\bin\Debug\netcoreapp1.1\ServiceDiscvery.SelfRegister.runtimeconfig.json
+C:\Users\3tar\Documents\GitHub\microservice-aspnetcore-servicediscvoery\ServiceDiscvery.SelfRegisteration\Client\bin\Debug\netcoreapp1.1\ServiceDiscvery.SelfRegister.runtimeconfig.dev.json
+C:\Users\3tar\Documents\GitHub\microservice-aspnetcore-servicediscvoery\ServiceDiscvery.SelfRegisteration\Client\bin\Debug\netcoreapp1.1\ServiceDiscvery.SelfRegister.dll
+C:\Users\3tar\Documents\GitHub\microservice-aspnetcore-servicediscvoery\ServiceDiscvery.SelfRegisteration\Client\bin\Debug\netcoreapp1.1\ServiceDiscvery.SelfRegister.pdb
+C:\Users\3tar\Documents\GitHub\microservice-aspnetcore-servicediscvoery\ServiceDiscvery.SelfRegisteration\Client\obj\Debug\netcoreapp1.1\ServiceDiscvery.SelfRegister.csprojResolveAssemblyReference.cache
+C:\Users\3tar\Documents\GitHub\microservice-aspnetcore-servicediscvoery\ServiceDiscvery.SelfRegisteration\Client\obj\Debug\netcoreapp1.1\ServiceDiscvery.SelfRegister.AssemblyInfo.cs
+C:\Users\3tar\Documents\GitHub\microservice-aspnetcore-servicediscvoery\ServiceDiscvery.SelfRegisteration\Client\obj\Debug\netcoreapp1.1\ServiceDiscvery.SelfRegister.dll
+C:\Users\3tar\Documents\GitHub\microservice-aspnetcore-servicediscvoery\ServiceDiscvery.SelfRegisteration\Client\obj\Debug\netcoreapp1.1\ServiceDiscvery.SelfRegister.pdb
