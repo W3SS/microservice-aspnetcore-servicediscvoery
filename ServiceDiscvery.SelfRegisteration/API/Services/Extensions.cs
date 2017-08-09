@@ -34,22 +34,31 @@ namespace ServiceDiscvery.SelfRegisteration.Services
                     Name = consulConfig.Value.Name,
                     Address = $"{uri.Scheme}://{uri.Host}",
                     Port = uri.Port,
-                    Tags = new[] { "City", "Hotel","API"},
-                    EnableTagOverride=true
+                    Tags = new[] { "City", "Hotel", "API" },
+                    EnableTagOverride = true,
+                    Check = new AgentServiceCheck()
+                    {                        
+                        HTTP = $"{uri.Scheme}://{uri.Host}:{uri.Port}/api/heartbeat/status",
+                        Timeout = TimeSpan.FromSeconds(3),
+                        Interval = TimeSpan.FromSeconds(10),
+                        TTL = TimeSpan.FromMinutes(1),
+                        DeregisterCriticalServiceAfter = TimeSpan.FromMinutes(5)
+                    }
                 };
 
                 logger.LogInformation("Start Self Client Registering from Consul");
-                
+
                 //First deregister service from Consul
                 consulClient.Agent.ServiceDeregister(registration.ID).Wait();
-                
+
                 //Then deregister service from Consul
                 consulClient.Agent.ServiceRegister(registration).Wait();
                 logger.LogInformation("End Self Client Registering from Consul");
 
-                lifetime.ApplicationStopping.Register(() => {
+                lifetime.ApplicationStopping.Register(() =>
+                {
                     logger.LogInformation("Deregistering from Consul");
-                    consulClient.Agent.ServiceDeregister(registration.ID).Wait();                    
+                    consulClient.Agent.ServiceDeregister(registration.ID).Wait();
                 });
             }
             catch (Exception x)
@@ -58,6 +67,6 @@ namespace ServiceDiscvery.SelfRegisteration.Services
             }
 
             return app;
-        }      
+        }
     }
 }

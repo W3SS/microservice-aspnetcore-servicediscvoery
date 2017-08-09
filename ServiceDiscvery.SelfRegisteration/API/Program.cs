@@ -1,9 +1,6 @@
 ﻿using System.Diagnostics;
 using System.IO;
-using System.Net;
-using System.Net.Sockets;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
 namespace ServiceDiscvery.SelfRegisteration
@@ -12,10 +9,8 @@ namespace ServiceDiscvery.SelfRegisteration
     {
         public static void Main(string[] args)
         {
-            var freePort = FreeTcpPort();
-
             var host = new WebHostBuilder()
-                .UseUrls($"http://localhost:{freePort}")
+                .UseUrls($"http://localhost:{27899}")
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
@@ -28,14 +23,6 @@ namespace ServiceDiscvery.SelfRegisteration
 
             host.Run();
         }
-
-        private static int FreeTcpPort()
-        {
-            var l = new TcpListener(IPAddress.Loopback, 0);
-            l.Start();
-            var port = ((IPEndPoint)l.LocalEndpoint).Port;
-            l.Stop();
-            return port;
-        }
+        
     }
 }
